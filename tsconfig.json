@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
     "noImplicitAny": true,
-    "esModuleInterop": true,
     "declaration": true,
+    "esModuleInterop": true,
     "declarationDir": "dist",
+    "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]

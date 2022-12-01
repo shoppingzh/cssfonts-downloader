@@ -1,7 +1,6 @@
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'fs'
 import config from './config'
 import { resolve } from 'path'
-import prompt from 'prompt'
 import { writeFileFromUrl } from './util'
 import { parseCssRefs } from './regExp'
 
@@ -30,10 +29,6 @@ export async function download(url: string, destDir: string) {
     mkdirSync(destDir)
   }
 
-  prompt.start({
-    colors: true,
-  })
-  
   const tmpCssFile = resolve(config.TEMP_PATH, 'iconfont.css')
   await writeFileFromUrl(url as string, tmpCssFile)
 

@@ -1,6 +1,6 @@
 # iconfont-download
 
-iconfont字体包下载器，可以根据
+iconfont字体包下载器，用于下载一个外链css文件及其依赖的所有字体文件。
 
 ## 安装
 

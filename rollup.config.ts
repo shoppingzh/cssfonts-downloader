@@ -12,7 +12,7 @@ export default defineConfig({
   output: {
     dir: 'dist',
     format: 'umd',
-    name: 'IconfontDownload'
+    name: 'CssFontsDownloader'
   },
   plugins: [
     alias({

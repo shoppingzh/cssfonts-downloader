@@ -1,7 +1,7 @@
 {
-  "name": "iconfont-download",
+  "name": "cssfonts-downloader",
   "version": "0.0.1",
-  "description": "iconfont字体包下载器",
+  "description": "css字体包下载器",
   "main": "./dist/index.js",
   "scripts": {
     "build": "rollup -c --configPlugin typescript --bundleConfigAsCjs",
@@ -9,7 +9,7 @@
     "test": "jest --passWithNoTests",
     "prepare": "husky install"
   },
-  "repository": "git@github.com:shoppingzh/iconfont-download.git",
+  "repository": "git@github.com:shoppingzh/cssfonts-downloader.git",
   "author": "shoppingzh <xpzheng6@163.com>",
   "license": "MIT",
   "devDependencies": {

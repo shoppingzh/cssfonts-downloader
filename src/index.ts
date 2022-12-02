@@ -29,16 +29,16 @@ export async function download(url: string, destDir: string) {
     mkdirSync(destDir)
   }
 
-  const tmpCssFile = resolve(config.TEMP_PATH, 'iconfont.css')
+  const tmpCssFile = resolve(config.TEMP_PATH, 'font.css')
   await writeFileFromUrl(url as string, tmpCssFile)
 
   let cssContent = readFileSync(tmpCssFile, { encoding: 'utf-8' })
   const cssRefs = parseCssRefs(cssContent)
   cssRefs.forEach((ref) => {
     const extname = REF_FORMAT_FILE_EXT[ref.format]
-    const filename = `iconfont.${extname}`
+    const filename = `font.${extname}`
     cssContent = cssContent.replace(ref.url, `${filename}?t=${+new Date()}`)
     writeFileFromUrl(getFixedUrl(ref.url), resolve(destDir, filename))
   })
-  writeFileSync(resolve(destDir, 'iconfont.css'), cssContent)
+  writeFileSync(resolve(destDir, 'font.css'), cssContent)
 }
